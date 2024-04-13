@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 django = "==5.0"
 djangorestframework = "*"
+drf-yasg = "*"
+django-rest-auth = "*"
+dj-rest-auth = "*"
+django-allauth = "*"
 
 [dev-packages]
 
