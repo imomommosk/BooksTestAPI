@@ -1,4 +1,5 @@
 from rest_framework.decorators import api_view
+from rest_framework.viewsets import ModelViewSet
 
 from .models import Book
 from .serializers import BookSerializer
@@ -26,6 +27,10 @@ class BookCreateApiView(generics.CreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
+class BookViewset(ModelViewSet):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
+# crud
 @api_view(['GET'])
 def book_list_view(request, *args, **kwargs):
     books = Book.objects.all()
